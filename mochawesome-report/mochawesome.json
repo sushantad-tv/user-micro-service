@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-16T13:10:18.290Z",
-    "end": "2023-10-16T13:10:18.321Z",
-    "duration": 31,
+    "start": "2023-10-16T13:16:46.929Z",
+    "end": "2023-10-16T13:16:46.970Z",
+    "duration": 41,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "96a1b2fb-2e1f-4468-8237-98ca87378e7d",
+      "uuid": "e3f01ed5-4a37-40c9-a214-7d31d3a2970e",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
       "file": "/src/unit/user.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "eb56623a-02f9-4442-8ccd-a61a53d3907f",
+          "uuid": "3339c57a-21de-4416-8e7e-2b1043e6f127",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
           "file": "/src/unit/user.test.js",
@@ -45,8 +45,8 @@
               "context": null,
               "code": "// Stub User.createUser to return a Dummy user\n       const createUserStub = sinon.stub(User, 'createUser').resolves({\n   _id: '65153b534b51b249d08d138c',\n   name: 'Dummy User',\n   email: 'dummy@example.com',\n   age: 77\n        });\n // Stub user.generateAuthToken to return a mock token\n        const generateAuthTokenStub = sinon.stub().resolves('your-generated-token-here');\n        createUserStub.returns({ generateAuthToken: generateAuthTokenStub });",
               "err": {},
-              "uuid": "d5d424aa-3f22-4f58-82fc-43f68e4223e0",
-              "parentUUID": "eb56623a-02f9-4442-8ccd-a61a53d3907f",
+              "uuid": "f1552816-0eb6-4b09-b105-ce979fcb3c6c",
+              "parentUUID": "3339c57a-21de-4416-8e7e-2b1043e6f127",
               "isHook": true,
               "skipped": false
             }
@@ -65,8 +65,8 @@
               "context": null,
               "code": "sinon.restore();\nserver.close();",
               "err": {},
-              "uuid": "12356a67-7b7d-42ce-9e86-1092f45ac521",
-              "parentUUID": "eb56623a-02f9-4442-8ccd-a61a53d3907f",
+              "uuid": "f7d868c6-03ce-41f7-a517-6ce58112b7d0",
+              "parentUUID": "3339c57a-21de-4416-8e7e-2b1043e6f127",
               "isHook": true,
               "skipped": false
             }
@@ -74,7 +74,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "4fe3e85b-b782-4808-94ee-b3d41e364ddd",
+              "uuid": "01656dfe-31e1-43c2-baae-de632ef4a698",
               "title": "User Routes",
               "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
               "file": "/src/unit/user.test.js",
@@ -85,7 +85,7 @@
                   "title": "should handle POST /api/user/sign-up",
                   "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes should handle POST /api/user/sign-up",
                   "timedOut": false,
-                  "duration": 26,
+                  "duration": 34,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -94,20 +94,20 @@
                   "context": null,
                   "code": "const response = await chai\n  .request(app)\n  .post('/api/user/sign-up')\n  .send({\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});\nchai.expect(response).to.have.status(201); \nsinon.assert.calledWithExactly(User.createUser, {\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});",
                   "err": {},
-                  "uuid": "c742c732-252a-49da-84f7-157f5ada62c3",
-                  "parentUUID": "4fe3e85b-b782-4808-94ee-b3d41e364ddd",
+                  "uuid": "4753801d-2e7c-4d15-8d5a-a535e2d55062",
+                  "parentUUID": "01656dfe-31e1-43c2-baae-de632ef4a698",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c742c732-252a-49da-84f7-157f5ada62c3"
+                "4753801d-2e7c-4d15-8d5a-a535e2d55062"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 26,
+              "duration": 34,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
