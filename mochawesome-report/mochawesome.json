@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-16T14:56:39.955Z",
-    "end": "2023-10-16T14:56:40.005Z",
-    "duration": 50,
+    "start": "2023-10-16T15:00:48.800Z",
+    "end": "2023-10-16T15:00:48.833Z",
+    "duration": 33,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7ce227fb-0310-4e8e-83be-d4f21a1a0dfa",
+      "uuid": "e5827b70-0dd8-42a8-b9f5-d71d8a0b4089",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
       "file": "/src/unit/user.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a28a6183-3b35-4834-93b4-9144d7d2b2c3",
+          "uuid": "561e4ce6-7e5c-4a39-bb87-60e513ae6585",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
           "file": "/src/unit/user.test.js",
@@ -45,8 +45,8 @@
               "context": null,
               "code": "// Stub User.createUser to return a Dummy user\n       const createUserStub = sinon.stub(User, 'createUser').resolves({\n   _id: '65153b534b51b249d08d138c',\n   name: 'Dummy User',\n   email: 'dummy@example.com',\n   age: 77\n        });\n // Stub user.generateAuthToken to return a mock token\n        const generateAuthTokenStub = sinon.stub().resolves('your-generated-token-here');\n        createUserStub.returns({ generateAuthToken: generateAuthTokenStub });",
               "err": {},
-              "uuid": "48ceb915-942d-4cc1-925c-aeae10df4fe6",
-              "parentUUID": "a28a6183-3b35-4834-93b4-9144d7d2b2c3",
+              "uuid": "e2e58b35-b580-4fb4-89d8-cc7be186df18",
+              "parentUUID": "561e4ce6-7e5c-4a39-bb87-60e513ae6585",
               "isHook": true,
               "skipped": false
             }
@@ -65,8 +65,8 @@
               "context": null,
               "code": "sinon.restore();\nserver.close();",
               "err": {},
-              "uuid": "4ea98cd8-37c5-46ba-8280-1b097349d052",
-              "parentUUID": "a28a6183-3b35-4834-93b4-9144d7d2b2c3",
+              "uuid": "e9f4ee74-d585-4cda-b813-4dd4ce16a483",
+              "parentUUID": "561e4ce6-7e5c-4a39-bb87-60e513ae6585",
               "isHook": true,
               "skipped": false
             }
@@ -74,7 +74,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "337369bb-e800-48b9-b28f-0b750628f686",
+              "uuid": "dfd8dd51-25dd-421f-b346-a84bd36f281a",
               "title": "User Routes",
               "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
               "file": "/src/unit/user.test.js",
@@ -85,29 +85,29 @@
                   "title": "should handle POST /api/user/sign-up",
                   "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes should handle POST /api/user/sign-up",
                   "timedOut": false,
-                  "duration": 43,
+                  "duration": 28,
                   "state": "passed",
-                  "speed": "medium",
+                  "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "const response = await chai\n  .request(app)\n  .post('/api/user/sign-up')\n  .send({\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});\nchai.expect(response).to.have.status(201); \nsinon.assert.calledWithExactly(User.createUser, {\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});",
                   "err": {},
-                  "uuid": "2c242eea-7a12-4b59-98c3-de679a6d45f4",
-                  "parentUUID": "337369bb-e800-48b9-b28f-0b750628f686",
+                  "uuid": "305bb1ad-04ab-4d37-acf9-d117847a7f5c",
+                  "parentUUID": "dfd8dd51-25dd-421f-b346-a84bd36f281a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "2c242eea-7a12-4b59-98c3-de679a6d45f4"
+                "305bb1ad-04ab-4d37-acf9-d117847a7f5c"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 43,
+              "duration": 28,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
