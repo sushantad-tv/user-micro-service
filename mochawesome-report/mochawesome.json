@@ -1,13 +1,13 @@
 {
   "stats": {
-    "suites": 2,
+    "suites": 1,
     "tests": 1,
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-16T15:25:33.654Z",
-    "end": "2023-10-16T15:25:33.689Z",
-    "duration": 35,
+    "start": "2023-10-19T12:05:03.033Z",
+    "end": "2023-10-19T12:05:03.503Z",
+    "duration": 470,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,106 +18,49 @@
   },
   "results": [
     {
-      "uuid": "a4fc0912-5d31-4941-8ab3-644ca99ed8d2",
+      "uuid": "dad536ae-4182-42c2-95fd-3f8392b35b9c",
       "title": "",
-      "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
-      "file": "/src/unit/user.test.js",
+      "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
+      "file": "/src/test/user_api.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3494983c-ef2a-43c1-beb0-cfe44c88d77e",
+          "uuid": "4db7082b-7ef8-4767-8e0f-f8bd2c9f8439",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
-          "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
-          "file": "/src/unit/user.test.js",
-          "beforeHooks": [
+          "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
+          "file": "/src/test/user_api.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
             {
-              "title": "\"before all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
-              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) \"before all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
+              "title": "User Routes, Controller, and Factory (Unit Tests)",
+              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes, Controller, and Factory (Unit Tests)",
               "timedOut": false,
-              "duration": 2,
-              "state": null,
-              "speed": null,
-              "pass": false,
+              "duration": 462,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Stub User.createUser to return a Dummy user\n       const createUserStub = sinon.stub(User, 'createUser').resolves({\n   _id: '65153b534b51b249d08d138c',\n   name: 'Dummy User',\n   email: 'dummy@example.com',\n   age: 77\n        });\n // Stub user.generateAuthToken to return a mock token\n        const generateAuthTokenStub = sinon.stub().resolves('your-generated-token-here');\n        createUserStub.returns({ generateAuthToken: generateAuthTokenStub });",
+              "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n      expect(response.status).to.equal(200);\n      const data = await response.json();\n      console.log(data);",
               "err": {},
-              "uuid": "2a8d4c51-05bd-4c28-b73f-699f6e456466",
-              "parentUUID": "3494983c-ef2a-43c1-beb0-cfe44c88d77e",
-              "isHook": true,
+              "uuid": "65dcdc77-54ef-4c06-b3cd-b31f1cc40118",
+              "parentUUID": "4db7082b-7ef8-4767-8e0f-f8bd2c9f8439",
+              "isHook": false,
               "skipped": false
             }
           ],
-          "afterHooks": [
-            {
-              "title": "\"after all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
-              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) \"after all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
-              "timedOut": false,
-              "duration": 0,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "sinon.restore();\nserver.close();",
-              "err": {},
-              "uuid": "4bdda651-d5fb-4f59-9b7e-8299c54b8a4b",
-              "parentUUID": "3494983c-ef2a-43c1-beb0-cfe44c88d77e",
-              "isHook": true,
-              "skipped": false
-            }
+          "suites": [],
+          "passes": [
+            "65dcdc77-54ef-4c06-b3cd-b31f1cc40118"
           ],
-          "tests": [],
-          "suites": [
-            {
-              "uuid": "4595509d-e87f-4bbd-8b18-8739e6526be4",
-              "title": "User Routes",
-              "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
-              "file": "/src/unit/user.test.js",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "should handle POST /api/user/sign-up",
-                  "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes should handle POST /api/user/sign-up",
-                  "timedOut": false,
-                  "duration": 29,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "const response = await chai\n  .request(app)\n  .post('/api/user/sign-up')\n  .send({\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});\nchai.expect(response).to.have.status(201); \nsinon.assert.calledWithExactly(User.createUser, {\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});",
-                  "err": {},
-                  "uuid": "5a32466c-236c-49a7-afe4-e07affd049cd",
-                  "parentUUID": "4595509d-e87f-4bbd-8b18-8739e6526be4",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "5a32466c-236c-49a7-afe4-e07affd049cd"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 29,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
-            }
-          ],
-          "passes": [],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 462,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
