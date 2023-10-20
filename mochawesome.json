@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-20T07:41:26.229Z",
-    "end": "2023-10-20T07:41:26.261Z",
-    "duration": 32,
+    "start": "2023-10-20T07:48:20.409Z",
+    "end": "2023-10-20T07:48:20.447Z",
+    "duration": 38,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8d75827b-7af9-49c6-bcb4-a3614217aa23",
+      "uuid": "120fffa9-5aa9-415a-a80a-dfbbea56df75",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
       "file": "/src/unit/user.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "da56963f-395d-4690-93f8-3092daf841ce",
+          "uuid": "5559619e-253e-4a67-8953-ac585afa6ff1",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
           "file": "/src/unit/user.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
               "fullTitle": "User Routes, Controller, and Factory (Unit Tests) \"before all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
               "timedOut": false,
-              "duration": 1,
+              "duration": 2,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "// Stub User.createUser to return a Dummy user..\n       const createUserStub = sinon.stub(User, 'createUser').resolves({\n   _id: '65153b534b51b249d08d138c',\n   name: 'Dummy User',\n   email: 'dummy@example.com',\n   age: 77\n        });\n // Stub user.generateAuthToken to return a mock token\n        const generateAuthTokenStub = sinon.stub().resolves('your-generated-token-here');\n        createUserStub.returns({ generateAuthToken: generateAuthTokenStub });",
               "err": {},
-              "uuid": "8fc2f84f-214a-4f2a-9a0f-915dfb5ab59f",
-              "parentUUID": "da56963f-395d-4690-93f8-3092daf841ce",
+              "uuid": "c92fd8e7-4886-46c8-9ca1-fd24a3c6dada",
+              "parentUUID": "5559619e-253e-4a67-8953-ac585afa6ff1",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
               "fullTitle": "User Routes, Controller, and Factory (Unit Tests) \"after all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "sinon.restore();\nserver.close();",
               "err": {},
-              "uuid": "e739899e-61ea-4094-987f-30c1d391c5b8",
-              "parentUUID": "da56963f-395d-4690-93f8-3092daf841ce",
+              "uuid": "a3129a32-ceb1-4b78-891f-2060df67c59a",
+              "parentUUID": "5559619e-253e-4a67-8953-ac585afa6ff1",
               "isHook": true,
               "skipped": false
             }
@@ -74,7 +74,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e17f1dd5-2ac5-4c65-abab-b7e2adee53c1",
+              "uuid": "ca0ca1d9-fc0a-437e-9e60-4b04cc7ab9f4",
               "title": "User Routes",
               "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
               "file": "/src/unit/user.test.js",
@@ -85,7 +85,7 @@
                   "title": "should handle POST /api/user/sign-up",
                   "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes should handle POST /api/user/sign-up",
                   "timedOut": false,
-                  "duration": 26,
+                  "duration": 31,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -94,20 +94,20 @@
                   "context": null,
                   "code": "const response = await chai\n  .request(app)\n  .post('/api/user/sign-up')\n  .send({\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});\nchai.expect(response).to.have.status(201); \nsinon.assert.calledWithExactly(User.createUser, {\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});",
                   "err": {},
-                  "uuid": "8d8d94e0-8112-4695-86fa-6ce52525b026",
-                  "parentUUID": "e17f1dd5-2ac5-4c65-abab-b7e2adee53c1",
+                  "uuid": "8dcca09e-5dd8-425d-b880-97c5da477b3d",
+                  "parentUUID": "ca0ca1d9-fc0a-437e-9e60-4b04cc7ab9f4",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "8d8d94e0-8112-4695-86fa-6ce52525b026"
+                "8dcca09e-5dd8-425d-b880-97c5da477b3d"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 26,
+              "duration": 31,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
