@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-20T07:36:11.637Z",
-    "end": "2023-10-20T07:36:11.670Z",
-    "duration": 33,
+    "start": "2023-10-20T07:41:26.229Z",
+    "end": "2023-10-20T07:41:26.261Z",
+    "duration": 32,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "abe382ee-2f47-4084-9a14-d36febba7701",
+      "uuid": "8d75827b-7af9-49c6-bcb4-a3614217aa23",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
       "file": "/src/unit/user.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "166f3ea3-cd5c-48c6-989b-0a7ef1f0e522",
+          "uuid": "da56963f-395d-4690-93f8-3092daf841ce",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
           "file": "/src/unit/user.test.js",
@@ -45,8 +45,8 @@
               "context": null,
               "code": "// Stub User.createUser to return a Dummy user..\n       const createUserStub = sinon.stub(User, 'createUser').resolves({\n   _id: '65153b534b51b249d08d138c',\n   name: 'Dummy User',\n   email: 'dummy@example.com',\n   age: 77\n        });\n // Stub user.generateAuthToken to return a mock token\n        const generateAuthTokenStub = sinon.stub().resolves('your-generated-token-here');\n        createUserStub.returns({ generateAuthToken: generateAuthTokenStub });",
               "err": {},
-              "uuid": "fddb3981-5d81-4b76-aa0e-c704fd4e11ef",
-              "parentUUID": "166f3ea3-cd5c-48c6-989b-0a7ef1f0e522",
+              "uuid": "8fc2f84f-214a-4f2a-9a0f-915dfb5ab59f",
+              "parentUUID": "da56963f-395d-4690-93f8-3092daf841ce",
               "isHook": true,
               "skipped": false
             }
@@ -65,8 +65,8 @@
               "context": null,
               "code": "sinon.restore();\nserver.close();",
               "err": {},
-              "uuid": "b38dcb75-d914-461f-a1aa-201819e0eca0",
-              "parentUUID": "166f3ea3-cd5c-48c6-989b-0a7ef1f0e522",
+              "uuid": "e739899e-61ea-4094-987f-30c1d391c5b8",
+              "parentUUID": "da56963f-395d-4690-93f8-3092daf841ce",
               "isHook": true,
               "skipped": false
             }
@@ -74,7 +74,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "40ee693a-5d47-404a-b934-486b0d7e990a",
+              "uuid": "e17f1dd5-2ac5-4c65-abab-b7e2adee53c1",
               "title": "User Routes",
               "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
               "file": "/src/unit/user.test.js",
@@ -94,15 +94,15 @@
                   "context": null,
                   "code": "const response = await chai\n  .request(app)\n  .post('/api/user/sign-up')\n  .send({\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});\nchai.expect(response).to.have.status(201); \nsinon.assert.calledWithExactly(User.createUser, {\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});",
                   "err": {},
-                  "uuid": "d5ecc991-3d5c-4ecd-a228-404b8360adb5",
-                  "parentUUID": "40ee693a-5d47-404a-b934-486b0d7e990a",
+                  "uuid": "8d8d94e0-8112-4695-86fa-6ce52525b026",
+                  "parentUUID": "e17f1dd5-2ac5-4c65-abab-b7e2adee53c1",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "d5ecc991-3d5c-4ecd-a228-404b8360adb5"
+                "8d8d94e0-8112-4695-86fa-6ce52525b026"
               ],
               "failures": [],
               "pending": [],
