@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-10-19T19:05:20.377Z",
-    "end": "2023-10-19T19:05:53.094Z",
-    "duration": 32717,
+    "failures": 2,
+    "start": "2023-10-20T06:03:28.103Z",
+    "end": "2023-10-20T06:04:09.768Z",
+    "duration": 41665,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2e6cb94a-0a9a-444f-89c9-28e227302592",
+      "uuid": "d1fcc3f3-81f7-4393-a0c9-6d24c41b46bf",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
       "file": "/src/test/user_api.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "40bb4241-5561-4098-80c0-7c80fb41069e",
+          "uuid": "16f0bb59-5f1f-4b08-a168-e0c65f55a956",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
           "file": "/src/test/user_api.js",
@@ -37,18 +37,22 @@
             {
               "title": "User Routes, Controller, and Factory (Unit Tests)",
               "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes, Controller, and Factory (Unit Tests)",
-              "timedOut": false,
-              "duration": 32309,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "timedOut": true,
+              "duration": 40072,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n      expect(response.status).to.equal(200);\n      const data = await response.json();\n      console.log(data);",
-              "err": {},
-              "uuid": "cc2d5536-f6eb-4144-b449-bd950ffed342",
-              "parentUUID": "40bb4241-5561-4098-80c0-7c80fb41069e",
+              "err": {
+                "message": "Error: Timeout of 40000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js)",
+                "estack": "Error: Timeout of 40000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "b513a278-15ea-48c3-b5f6-29aeb3ac3535",
+              "parentUUID": "16f0bb59-5f1f-4b08-a168-e0c65f55a956",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +60,7 @@
               "title": "User Routes, Controller, and Factory (Unit Tests)",
               "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes, Controller, and Factory (Unit Tests)",
               "timedOut": false,
-              "duration": 401,
+              "duration": 1586,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,22 +73,21 @@
                 "estack": "AssertionError: expected 200 to equal 400\n    at Context.<anonymous> (src/test/user_api.js:18:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- 200\n+ 400\n"
               },
-              "uuid": "8ae20cb8-344e-4859-8226-19e7fc8b2026",
-              "parentUUID": "40bb4241-5561-4098-80c0-7c80fb41069e",
+              "uuid": "196de1a6-c710-4445-b18b-416be80b0d3b",
+              "parentUUID": "16f0bb59-5f1f-4b08-a168-e0c65f55a956",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "cc2d5536-f6eb-4144-b449-bd950ffed342"
-          ],
+          "passes": [],
           "failures": [
-            "8ae20cb8-344e-4859-8226-19e7fc8b2026"
+            "b513a278-15ea-48c3-b5f6-29aeb3ac3535",
+            "196de1a6-c710-4445-b18b-416be80b0d3b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 32710,
+          "duration": 41658,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
