@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
+    "suites": 2,
+    "tests": 1,
     "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-10-20T06:44:50.860Z",
-    "end": "2023-10-20T06:44:51.586Z",
-    "duration": 726,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "failures": 0,
+    "start": "2023-10-20T07:21:38.904Z",
+    "end": "2023-10-20T07:21:38.949Z",
+    "duration": 45,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,73 +18,106 @@
   },
   "results": [
     {
-      "uuid": "c7b807a0-c466-40af-97a0-4bc9d67b7057",
+      "uuid": "df9a4e05-6aff-458a-a099-2b50e3d97965",
       "title": "",
-      "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
-      "file": "/src/test/user_api.js",
+      "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
+      "file": "/src/unit/user.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3c523e11-af78-4131-9504-cf1295698018",
+          "uuid": "d4fb141c-7514-44e1-9550-b8b0e7063b65",
           "title": "User Routes, Controller, and Factory (Unit Tests)",
-          "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
-          "file": "/src/test/user_api.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
+          "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
+          "file": "/src/unit/user.test.js",
+          "beforeHooks": [
             {
-              "title": "User Routes, Controller, and Factory (Unit Tests)",
-              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes, Controller, and Factory (Unit Tests)",
+              "title": "\"before all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
+              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) \"before all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
               "timedOut": false,
-              "duration": 415,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
+              "duration": 2,
+              "state": null,
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n      expect(response.status).to.equal(200);\n      const data = await response.json();\n      console.log(data);",
+              "code": "// Stub User.createUser to return a Dummy user..\n       const createUserStub = sinon.stub(User, 'createUser').resolves({\n   _id: '65153b534b51b249d08d138c',\n   name: 'Dummy User',\n   email: 'dummy@example.com',\n   age: 77\n        });\n // Stub user.generateAuthToken to return a mock token\n        const generateAuthTokenStub = sinon.stub().resolves('your-generated-token-here');\n        createUserStub.returns({ generateAuthToken: generateAuthTokenStub });",
               "err": {},
-              "uuid": "5b463bee-bdc2-4b58-aecd-63ba3b99f8ca",
-              "parentUUID": "3c523e11-af78-4131-9504-cf1295698018",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "User Routes, Controller, and Factory (Unit Tests)",
-              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes, Controller, and Factory (Unit Tests)",
-              "timedOut": false,
-              "duration": 302,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n        expect(response.status).to.equal(400);\n        const data = await response.json();\n        console.log(data);",
-              "err": {
-                "message": "AssertionError: expected 200 to equal 400",
-                "estack": "AssertionError: expected 200 to equal 400\n    at Context.<anonymous> (src/test/user_api.js:18:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
-                "diff": "- 200\n+ 400\n"
-              },
-              "uuid": "ef70db21-616d-4991-8ed5-39b2316f5083",
-              "parentUUID": "3c523e11-af78-4131-9504-cf1295698018",
-              "isHook": false,
+              "uuid": "9042aceb-3722-4959-a69e-c11595245668",
+              "parentUUID": "d4fb141c-7514-44e1-9550-b8b0e7063b65",
+              "isHook": true,
               "skipped": false
             }
           ],
-          "suites": [],
-          "passes": [
-            "5b463bee-bdc2-4b58-aecd-63ba3b99f8ca"
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
+              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) \"after all\" hook in \"User Routes, Controller, and Factory (Unit Tests)\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sinon.restore();\nserver.close();",
+              "err": {},
+              "uuid": "a143683d-79af-4034-828e-d0833d46995f",
+              "parentUUID": "d4fb141c-7514-44e1-9550-b8b0e7063b65",
+              "isHook": true,
+              "skipped": false
+            }
           ],
-          "failures": [
-            "ef70db21-616d-4991-8ed5-39b2316f5083"
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "cc0637c1-7485-42f7-aa77-59eb48d9a2da",
+              "title": "User Routes",
+              "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/unit/user.test.js",
+              "file": "/src/unit/user.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should handle POST /api/user/sign-up",
+                  "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes should handle POST /api/user/sign-up",
+                  "timedOut": false,
+                  "duration": 37,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const response = await chai\n  .request(app)\n  .post('/api/user/sign-up')\n  .send({\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});\nchai.expect(response).to.have.status(201); \nsinon.assert.calledWithExactly(User.createUser, {\n    \"name\":\"ravi\",\n    \"age\":27,\n    \"email\":\"ravi001101@tmpeml.com\",\n    \"password\":\"t23s70y\"\n});",
+                  "err": {},
+                  "uuid": "860e0b35-5021-4cbf-b926-5966d4381a60",
+                  "parentUUID": "cc0637c1-7485-42f7-aa77-59eb48d9a2da",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "860e0b35-5021-4cbf-b926-5966d4381a60"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 37,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
           ],
+          "passes": [],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 717,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
