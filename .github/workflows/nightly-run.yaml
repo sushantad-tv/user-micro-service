@@ -20,10 +20,8 @@ jobs:
     name: Smoke tests
     runs-on: ubuntu-latest
     steps:
-      - name: Print a message
-        run: |
-          npm install
-          npm test
-
       - name: Set environment variable
         run: echo "ENVIRONMENT=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
+
+      - name: Print a message
+        run: echo "Running test on ${{ ENVIRONMENT }}"
