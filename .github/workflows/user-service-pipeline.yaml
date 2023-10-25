@@ -12,6 +12,7 @@ on:
 jobs:
   static-analysis:
     name: Static Analysis
+    runs-on: ubuntu-latest
 
     steps:
       - name: Sonar Scan
