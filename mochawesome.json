@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-25T12:47:51.318Z",
-    "end": "2023-10-25T12:48:22.855Z",
-    "duration": 31537,
+    "start": "2023-10-25T13:19:19.863Z",
+    "end": "2023-10-25T13:19:51.379Z",
+    "duration": 31516,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1fa4dae7-b973-45c5-8f73-93e927e2821b",
+      "uuid": "19d8343d-fc5c-4208-a4a1-752addef4946",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
       "file": "/src/test/user_api.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b5726df5-970c-498e-a0a8-6a4dbd66d974",
+          "uuid": "b4d2cf9e-8331-48a9-9b48-2ecd186f9f1e",
           "title": "User Routes, Controller, and Factory (end-to-end test)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
           "file": "/src/test/user_api.js",
@@ -38,7 +38,7 @@
               "title": "User Routes, Controller, and Factory (end-to-end test)",
               "fullTitle": "User Routes, Controller, and Factory (end-to-end test) User Routes, Controller, and Factory (end-to-end test)",
               "timedOut": false,
-              "duration": 31531,
+              "duration": 31513,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n        expect(response.status).to.equal(200);\n        const data = await response.json();\n        console.log(data);",
               "err": {},
-              "uuid": "1409ab06-801c-4b74-9790-247267d5b273",
-              "parentUUID": "b5726df5-970c-498e-a0a8-6a4dbd66d974",
+              "uuid": "32dabdb3-8353-4c56-a01c-f6b5934a9ccf",
+              "parentUUID": "b4d2cf9e-8331-48a9-9b48-2ecd186f9f1e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1409ab06-801c-4b74-9790-247267d5b273"
+            "32dabdb3-8353-4c56-a01c-f6b5934a9ccf"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31531,
+          "duration": 31513,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
