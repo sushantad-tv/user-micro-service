@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-20T14:03:27.142Z",
-    "end": "2023-10-20T14:03:27.559Z",
-    "duration": 417,
+    "start": "2023-10-25T12:06:27.484Z",
+    "end": "2023-10-25T12:06:59.001Z",
+    "duration": 31517,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e3465749-ca9f-4c67-bfb8-4eb3563998d4",
+      "uuid": "e48a3dc9-66c3-44e3-9595-28e9e82ff89c",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
       "file": "/src/test/user_api.js",
@@ -27,40 +27,40 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "eb7e49c1-ff71-476f-b574-1596b687e42e",
-          "title": "User Routes, Controller, and Factory (Unit Tests)",
+          "uuid": "12307e45-845f-48b0-a43f-e0c621567a23",
+          "title": "User Routes, Controller, and Factory (end-to-end test)",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
           "file": "/src/test/user_api.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "User Routes, Controller, and Factory (Unit Tests)",
-              "fullTitle": "User Routes, Controller, and Factory (Unit Tests) User Routes, Controller, and Factory (Unit Tests)",
+              "title": "User Routes, Controller, and Factory (end-to-end test)",
+              "fullTitle": "User Routes, Controller, and Factory (end-to-end test) User Routes, Controller, and Factory (end-to-end test)",
               "timedOut": false,
-              "duration": 413,
+              "duration": 31513,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n      expect(response.status).to.equal(200);\n      const data = await response.json();\n      console.log(data);",
+              "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n        expect(response.status).to.equal(200);\n        const data = await response.json();\n        console.log(data);",
               "err": {},
-              "uuid": "e74ff442-15f9-4135-9fce-436854157981",
-              "parentUUID": "eb7e49c1-ff71-476f-b574-1596b687e42e",
+              "uuid": "e1f06046-beec-4628-8e29-2522255659a5",
+              "parentUUID": "12307e45-845f-48b0-a43f-e0c621567a23",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e74ff442-15f9-4135-9fce-436854157981"
+            "e1f06046-beec-4628-8e29-2522255659a5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 413,
+          "duration": 31513,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
