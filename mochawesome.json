@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-26T12:28:17.479Z",
-    "end": "2023-10-26T12:28:49.600Z",
-    "duration": 32121,
+    "start": "2023-10-26T13:01:08.368Z",
+    "end": "2023-10-26T13:01:40.417Z",
+    "duration": 32049,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "acd8489d-536f-48d5-a949-9abf068bdf3f",
+      "uuid": "98b04bc2-afdb-41e4-97c5-13359d5e2304",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/smoke_tests.js",
       "file": "/src/test/smoke_tests.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "42bf730a-1166-419f-b22c-d3845ed09c27",
+          "uuid": "433ae4f2-5b40-4192-8059-43a935972a9c",
           "title": "User service smoke tests",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/smoke_tests.js",
           "file": "/src/test/smoke_tests.js",
@@ -35,10 +35,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Smoke Test 1",
-              "fullTitle": "User service smoke tests Smoke Test 1",
+              "title": "Should be able to get the users",
+              "fullTitle": "User service smoke tests Should be able to get the users",
               "timedOut": false,
-              "duration": 32117,
+              "duration": 32043,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n        expect(response.status).to.equal(200);\n        const data = await response.json();\n        console.log(data);",
               "err": {},
-              "uuid": "fe3e7121-fd3b-48c6-9419-0892d024e27a",
-              "parentUUID": "42bf730a-1166-419f-b22c-d3845ed09c27",
+              "uuid": "578e2d03-2f87-4962-9227-ba69ba9295d0",
+              "parentUUID": "433ae4f2-5b40-4192-8059-43a935972a9c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fe3e7121-fd3b-48c6-9419-0892d024e27a"
+            "578e2d03-2f87-4962-9227-ba69ba9295d0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 32117,
+          "duration": 32043,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
