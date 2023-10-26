@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-25T13:19:19.863Z",
-    "end": "2023-10-25T13:19:51.379Z",
-    "duration": 31516,
+    "start": "2023-10-26T12:28:17.479Z",
+    "end": "2023-10-26T12:28:49.600Z",
+    "duration": 32121,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,27 +18,27 @@
   },
   "results": [
     {
-      "uuid": "19d8343d-fc5c-4208-a4a1-752addef4946",
+      "uuid": "acd8489d-536f-48d5-a949-9abf068bdf3f",
       "title": "",
-      "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
-      "file": "/src/test/user_api.js",
+      "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/smoke_tests.js",
+      "file": "/src/test/smoke_tests.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "b4d2cf9e-8331-48a9-9b48-2ecd186f9f1e",
-          "title": "User Routes, Controller, and Factory (end-to-end test)",
-          "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/user_api.js",
-          "file": "/src/test/user_api.js",
+          "uuid": "42bf730a-1166-419f-b22c-d3845ed09c27",
+          "title": "User service smoke tests",
+          "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/smoke_tests.js",
+          "file": "/src/test/smoke_tests.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "User Routes, Controller, and Factory (end-to-end test)",
-              "fullTitle": "User Routes, Controller, and Factory (end-to-end test) User Routes, Controller, and Factory (end-to-end test)",
+              "title": "Smoke Test 1",
+              "fullTitle": "User service smoke tests Smoke Test 1",
               "timedOut": false,
-              "duration": 31513,
+              "duration": 32117,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const response = await fetch('https://user-task-3kj1.onrender.com/users');\n        expect(response.status).to.equal(200);\n        const data = await response.json();\n        console.log(data);",
               "err": {},
-              "uuid": "32dabdb3-8353-4c56-a01c-f6b5934a9ccf",
-              "parentUUID": "b4d2cf9e-8331-48a9-9b48-2ecd186f9f1e",
+              "uuid": "fe3e7121-fd3b-48c6-9419-0892d024e27a",
+              "parentUUID": "42bf730a-1166-419f-b22c-d3845ed09c27",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "32dabdb3-8353-4c56-a01c-f6b5934a9ccf"
+            "fe3e7121-fd3b-48c6-9419-0892d024e27a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31513,
+          "duration": 32117,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
