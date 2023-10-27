@@ -42,7 +42,7 @@ describe('User Routes, Controller, and Factory (Unit Tests)', () => {
             "email":"ravi001101@tmpeml.com",
             "password":"t23s70y"
         });
-      });  
+      });
     });
 });
 
