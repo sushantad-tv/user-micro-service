@@ -75,16 +75,46 @@ jobs:
           npm install
           npm run smoke
 
+      # - name: Upload Mochawesome Report
+      #   if: always()
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: test-results
+      #     path: mochawesome-report
+
+  regresion-tests:
+    name: Regression Tests
+    needs: [smoke-tests]
+    runs-on: ubuntu-latest
+    #if: github.'push' && github.ref == 'refs/heads/main' && failure() != true && needs.smoke-tests.result == 'success'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Run Tests
+        run: |
+          npm install
+          npm run regression
+
       - name: Upload Mochawesome Report
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: test-results
+          name: regression-results
           path: mochawesome-report
+
 
   generate-report:
     name: Generate Report
-    needs: [ smoke-tests ]
+    needs: [ regresion-tests ]
     runs-on: ubuntu-latest
 
     steps:
@@ -104,5 +134,5 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GIT_TOKEN }}
+          github_token: ${{ secrets.SECRET_KEY }}
           publish_dir: report
