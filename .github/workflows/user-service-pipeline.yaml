@@ -75,6 +75,13 @@ jobs:
       - name: Run Regression Tests
         run: npm run regression
 
+      - name: Upload Mochawesome Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: mochawesome-report
+
   smoke-tests:
     name: Smoke Tests
     needs: [ integration-tests ]
@@ -96,13 +103,6 @@ jobs:
         run: |
           npm install
           npm run smoke
-
-      - name: Upload Mochawesome Report
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: mochawesome-report
 
   generate-report:
     name: Generate Report
