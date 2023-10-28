@@ -75,6 +75,30 @@ jobs:
           npm install
           npm run smoke
 
+     
+
+  regression-tests:
+    name: Regression Tests
+    needs: [ smoke-tests ]
+    runs-on: ubuntu-latest
+    #if: github.event_name == 'push' && github.ref == 'refs/heads/main' && failure() != true && needs.unit-tests.result == 'success'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Run Tests
+        run: |
+          npm install
+          npm run regression
+
       - name: Upload Mochawesome Report
         if: always()
         uses: actions/upload-artifact@v3
@@ -84,7 +108,7 @@ jobs:
 
   generate-report:
     name: Generate Report
-    needs: [ smoke-tests ]
+    needs: [ regression-tests ]
     runs-on: ubuntu-latest
 
     steps:
