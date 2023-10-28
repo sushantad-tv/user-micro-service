@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-27T19:30:09.718Z",
-    "end": "2023-10-27T19:30:09.938Z",
-    "duration": 220,
+    "start": "2023-10-28T08:26:00.709Z",
+    "end": "2023-10-28T08:26:01.046Z",
+    "duration": 337,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "91f9b05c-2914-4a7a-996b-fcb5cafd3d56",
+      "uuid": "eedb5b3d-474c-4e5d-83bf-9523ea9fdebc",
       "title": "",
       "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/smoke_tests.js",
       "file": "/src/test/smoke_tests.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0f2751ef-43c3-40a6-865c-0aae5b1c5bb6",
+          "uuid": "7507793c-68d1-44bc-81e6-81c9078840d7",
           "title": "User service smoke tests",
           "fullFile": "/home/runner/work/user-micro-service/user-micro-service/src/test/smoke_tests.js",
           "file": "/src/test/smoke_tests.js",
@@ -38,7 +38,7 @@
               "title": "Should be able to get the users",
               "fullTitle": "User service smoke tests Should be able to get the users",
               "timedOut": false,
-              "duration": 213,
+              "duration": 328,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const response = await fetch('https://user-service-azky.onrender.com/api/user/get-all-users');\n        expect(response.status).to.equal(200);\n        const data = await response.json();\n        console.log(data);",
               "err": {},
-              "uuid": "e484041d-1d13-47df-8510-e6cd9869de14",
-              "parentUUID": "0f2751ef-43c3-40a6-865c-0aae5b1c5bb6",
+              "uuid": "b72c838f-64a0-46fb-9720-baad71dde1f7",
+              "parentUUID": "7507793c-68d1-44bc-81e6-81c9078840d7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e484041d-1d13-47df-8510-e6cd9869de14"
+            "b72c838f-64a0-46fb-9720-baad71dde1f7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 213,
+          "duration": 328,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
