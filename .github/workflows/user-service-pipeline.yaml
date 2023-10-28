@@ -53,27 +53,27 @@ jobs:
       - name: Run Integration Tests
         run: npm run integration
 
-    regression-tests:
-      name: Regression Tests
-      needs: [ unit-tests ]
-      runs-on: ubuntu-latest
+  regression-tests:
+    name: Regression Tests
+    needs: [ unit-tests ]
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout Code
-          uses: actions/checkout@v3
-          with:
-            ref: ${{ github.event.pull_request.head.ref }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
-        - name: Set up Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: 16.x
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
 
-        - name: Install Dependencies
-          run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-        - name: Run Regression Tests
-          run: npm run regression
+      - name: Run Regression Tests
+        run: npm run regression
 
   smoke-tests:
     name: Smoke Tests
