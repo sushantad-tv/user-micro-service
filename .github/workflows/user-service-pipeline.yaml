@@ -74,6 +74,28 @@ jobs:
       - name: Run Integration Tests
         run: npm run integration
 
+  integration-tests:
+    name: Integration Tests
+    needs: [ smoke-tests ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Smoke Tests
+        run: npm run smoke  
+
   deploy:
     name: Deploy
     needs: [ unit-tests,integration-tests ]
@@ -117,7 +139,7 @@ jobs:
 
   generate-report:
     name: Generate Report
-    needs: [ smoke-tests ]
+    needs: [ regression-tests ]
     runs-on: ubuntu-latest
 
     steps:
